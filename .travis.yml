@@ -1,0 +1,12 @@
+language: python
+python:
+  - "2.7"
+  - "3.4"
+# command to install dependencies
+install:
+- "pip install -U pip"
+- "pip install --upgrade"
+#- "pip install -U pandas scikit-learn numpy matplotlib nbconvert ipykernel"
+- "pip install -U requests pandas gensim Cython scikit-learn numpy matplotlib nltk nbconvert jupyter_client ipykernel scipy runipy"
+# command to run tests
+script: travis_wait runipy hw4_starter_notebook.ipynb
